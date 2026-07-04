@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project | EmailLoom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#2cc28e;
+  --teal-bright:#37ffba;
+  --ink:#f4f8f9;
+  --ink-soft:#c3ced6;
+  --muted:#8a99a3;
+  --line:rgba(255,255,255,.09);
+  --bg:#0f1613;
+  --card:#1a2620;
+  --chip-bg:rgba(44,194,142,.13);
+  --btn-ink:#062d1f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:"Source Serif 4",Georgia,serif;
+  background:var(--bg);color:var(--ink);
+  display:flex;flex-direction:column;
+  -webkit-font-smoothing:antialiased;
+}
+h1,.logo{font-family:"Lato",Helvetica,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Toolbar ---------- */
+.toolbar{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:0 24px;height:72px;
+  background:rgba(14,30,37,.85);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.toolbar-left{display:flex;align-items:center;gap:20px;min-width:0}
+.back{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:700;font-size:.95rem;color:var(--teal-bright);
+  padding:10px 18px;border-radius:999px;
+  border:1.5px solid var(--teal);
+  transition:background .15s;white-space:nowrap;
+}
+.back:hover{background:var(--chip-bg)}
+.back svg{flex:none}
+h1{
+  font-size:1.15rem;font-weight:900;letter-spacing:-.3px;color:#fff;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+
+/* Toggle */
+.toggle{
+  display:flex;background:var(--card);
+  border:1px solid var(--line);border-radius:999px;padding:4px;flex:none;
+}
+.toggle button{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:"Lato",Helvetica,Arial,sans-serif;
+  font-size:.9rem;font-weight:700;color:var(--muted);
+  background:none;border:0;border-radius:999px;
+  padding:9px 18px;cursor:pointer;
+  transition:background .18s, color .18s;
+}
+.toggle button.active{
+  background:linear-gradient(135deg,var(--teal-bright),var(--teal));
+  color:var(--btn-ink);
+}
+.toggle button:not(.active):hover{color:var(--ink)}
+
+/* ---------- Stage ---------- */
+.stage{
+  flex:1;display:flex;justify-content:center;align-items:stretch;
+  padding:28px 20px 36px;overflow:auto;
+  background:var(--bg);
+}
+.frame-wrap{
+  display:flex;flex-direction:column;width:100%;max-width:1280px;
+  transition:max-width .35s ease;
+}
+.frame-wrap iframe{
+  flex:1;width:100%;min-height:70vh;border:0;background:#fff;
+}
+
+/* Desktop chrome */
+.frame-wrap.desktop{
+  border-radius:16px;overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.6);
+}
+.browser-bar{
+  display:flex;align-items:center;gap:14px;
+  background:var(--card);border-bottom:1px solid var(--line);
+  padding:12px 16px;
+}
+.dots{display:flex;gap:7px}
+.dots span{width:11px;height:11px;border-radius:50%}
+.dots span:nth-child(1){background:#ff5f57}
+.dots span:nth-child(2){background:#febc2e}
+.dots span:nth-child(3){background:#28c840}
+.url{
+  flex:1;font-size:.82rem;color:var(--muted);
+  background:rgba(255,255,255,.05);border-radius:8px;
+  padding:6px 14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+
+/* Phone chrome */
+.frame-wrap.mobile{
+  max-width:404px;
+  border-radius:44px;overflow:hidden;
+  border:10px solid #223129;
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.7), inset 0 0 0 1px rgba(255,255,255,.06);
+  position:relative;
+}
+.notch{
+  height:30px;background:#223129;
+  display:flex;justify-content:center;align-items:center;flex:none;
+}
+.notch::after{
+  content:"";width:110px;height:16px;border-radius:999px;background:#0c1310;
+}
+.frame-wrap.mobile .browser-bar{display:none}
+.frame-wrap.desktop .notch{display:none}
+
+.hint{
+  text-align:center;color:var(--muted);font-size:.9rem;padding:14px 20px 0;
+}
+
+@media(max-width:640px){
+  .toolbar{height:auto;flex-wrap:wrap;padding:12px 16px;row-gap:10px}
+  h1{font-size:1rem}
+  .back{padding:8px 14px;font-size:.88rem}
+  .toggle button{padding:8px 14px;font-size:.85rem}
+  .stage{padding:18px 10px 26px}
+  .frame-wrap.mobile{max-width:100%;border-width:6px;border-radius:28px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="toolbar-left">
+    <a class="back" href="index.html#projects">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      Back to Home
+    </a>
+    <h1 id="projectTitle">Project</h1>
+  </div>
+  <div class="toggle" role="group" aria-label="Preview mode">
+    <button id="btnDesktop" class="active" aria-pressed="true">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      Desktop
+    </button>
+    <button id="btnMobile" aria-pressed="false">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+      Mobile
+    </button>
+  </div>
+</div>
+
+<div class="stage">
+  <div class="frame-wrap desktop" id="frameWrap">
+    <div class="browser-bar">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="url" id="urlBar"></div>
+    </div>
+    <div class="notch"></div>
+    <iframe id="projectFrame" title="Project preview" loading="eager"></iframe>
+  </div>
+</div>
+<div class="hint" id="hint" hidden>Simulating a 375px mobile viewport — this is how the email renders on a phone.</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const path = params.get('p') || '';
+const title = params.get('t') || 'Project';
+
+// Only allow simple relative paths — no external URLs or protocol tricks
+const safe = /^[a-zA-Z0-9_\-./]+$/.test(path) && !path.startsWith('/') && !path.includes('..');
+// When deployed on the live site, load same-origin; otherwise (local preview) load from the live site
+const onLiveSite = location.protocol.startsWith('http');
+const base = onLiveSite ? location.origin + '/' : 'https://sri-dev.netlify.app/';
+const src = safe ? base + path : '';
+
+document.getElementById('projectTitle').textContent = title;
+document.title = title + ' | EmailLoom';
+document.getElementById('urlBar').textContent = base + (safe ? path : '');
+const frame = document.getElementById('projectFrame');
+if (src) frame.src = src;
+else document.querySelector('.stage').innerHTML =
+  '<p style="align-self:center;color:var(--muted)">Project not found. <a href="index.html" style="color:var(--teal-bright)">Back to home</a></p>';
+
+const wrap = document.getElementById('frameWrap');
+const hint = document.getElementById('hint');
+const btnD = document.getElementById('btnDesktop');
+const btnM = document.getElementById('btnMobile');
+
+function setMode(mobile){
+  wrap.classList.toggle('mobile', mobile);
+  wrap.classList.toggle('desktop', !mobile);
+  btnM.classList.toggle('active', mobile);
+  btnD.classList.toggle('active', !mobile);
+  btnM.setAttribute('aria-pressed', mobile);
+  btnD.setAttribute('aria-pressed', !mobile);
+  hint.hidden = !mobile;
+}
+btnD.addEventListener('click', () => setMode(false));
+btnM.addEventListener('click', () => setMode(true));
+</script>
+</body>
+</html>

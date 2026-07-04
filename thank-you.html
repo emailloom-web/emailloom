@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Thank You — EmailLoom</title>
+<link rel="icon" href="img/emailloom-logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#1fd0cc;--brand-bright:#31e6e2;--brand-dark:#0f9e9a;--btn-ink:#04302f;
+  --ink:#101b16;--ink-soft:#3d4f47;--muted:#67766f;--line:#e3ece7;
+  --dark:#14181a;--dark-card:#1e2426;--dark-line:rgba(255,255,255,.09);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Montserrat",Helvetica,Arial,sans-serif;color:#fff;
+  background:linear-gradient(180deg,#101415 0%,var(--dark) 60%,#14181a 100%);
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px;
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+.card{
+  max-width:560px;width:100%;text-align:center;
+  background:var(--dark-card);border:1px solid var(--dark-line);
+  border-radius:26px;padding:56px 44px;
+  box-shadow:0 34px 80px -34px rgba(0,0,0,.7);
+}
+.tick{
+  width:78px;height:78px;border-radius:50%;margin:0 auto 28px;
+  background:rgba(49,230,226,.1);border:2px solid rgba(49,230,226,.4);
+  display:flex;align-items:center;justify-content:center;color:var(--brand-bright);
+}
+h1{font-family:"Lato",Helvetica,Arial,sans-serif;font-weight:900;font-size:2rem;letter-spacing:-.5px;margin-bottom:14px}
+h1 span{
+  background:linear-gradient(90deg,var(--brand-bright),#1ab7b3);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+p{color:#c4d2cb;font-size:1.05rem;margin-bottom:34px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:inherit;font-size:1rem;font-weight:800;
+  padding:15px 34px;border-radius:999px;text-decoration:none;
+  color:var(--btn-ink);background:var(--brand-bright);
+  box-shadow:0 6px 16px -8px rgba(15,158,154,.45);
+  transition:transform .18s ease, background .18s ease;
+}
+.btn:hover{transform:translateY(-2px);background:#4aeae7}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="tick">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <h1>Message <span>Sent!</span></h1>
+  <p>Thanks for reaching out — your message is on its way. I typically reply within one business day. Talk soon!</p>
+  <a class="btn" href="index.html">← Back to EmailLoom</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,417 @@
+@font-face {font-family: 'At Aero';font-style: normal;font-weight: 400; src: url('https://cdn.winreality.com/reports/assets/WinAssessment/fonts/AtAero-Regular.woff2') format('woff2');}
+@font-face {font-family: 'At Aero'; font-style: normal; font-weight: 700; src: url('https://cdn.winreality.com/reports/assets/WinAssessment/fonts/AtAero-Bold.woff2') format('woff2'); }
+@font-face { font-family: 'At Aero'; font-style: normal; font-weight: 900; src: url('https://cdn.winreality.com/reports/assets/WinAssessment/fonts/AtAero-Super.woff2') format('woff2'); }
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'At Aero';
+font-weight: 400;
+font-style: normal;
+color: #FFF4E8;
+}
+a{
+    text-decoration: none;
+    outline:none;
+    border:none;
+}
+body{
+background: #18181E;
+}
+.wrapper{
+width: 80%;
+background: #18181E;
+margin:0 auto;
+}
+/* header style*/
+.navbar{
+    background-color: #18181E;
+    padding:  35px 50px;
+    display:flex;
+    align-items: left;
+    }
+.container{
+   margin:0px 50px;
+   display:block;
+   align-items: center;
+}
+.prim-t h1{
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 94%;
+    letter-spacing: -2.24px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.prim-t p{
+    padding-top:30px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+
+}
+.prim-t{
+    padding:35px 0px;
+}
+.prim-b{
+    padding-bottom:35px;
+}
+.prim-b img{
+    display:block;
+    margin:0px auto;
+}
+.prim-b .p14{
+    font-size: 14px;
+    font-weight:900;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 130%;
+    letter-spacing: 0.28px;
+    padding-top:10px;
+}
+.prim-b .p12{
+    font-size: 12px;
+    font-weight:400;
+    text-align: center;
+    letter-spacing:0.24px;
+    padding-top:6px;
+}
+/*Secondary style*/
+/*Vision*/
+.heading{
+    display:flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+    align-items: baseline;
+}
+.heading h2{
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 85%;
+    letter-spacing: -1.12px;
+    text-transform:uppercase;
+    
+}
+.heading img{
+    margin-right:10px;
+}
+.divider{
+    height:1px;
+    background: #FFF4E8;
+}
+/*Sub head*/
+.sub-head{
+    display:flex;
+    justify-content: space-between;
+    margin:30px 0px;
+}
+.sub-head-txt{
+    margin-right: 38px;
+}
+.sub-head-txt h4{
+    font-size: 20px;
+    font-weight: 800;
+    line-height:85%;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+}
+.sub-head-txt p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height:112%;
+    letter-spacing: -0.4px;
+    color: #FFF4E8;
+    padding-top:10px;
+}
+.sub-head-txt p span{
+    font-size: 12px;
+    font-weight: 400;
+    line-height:18px;
+    letter-spacing: -0.4px;
+    color: #8F8FA6;
+}
+.sub-head-bx{
+    width: 108px;
+    height: 100px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    background: #32323F;
+}
+.sub-head-bx h3{
+    font-size: 48px;
+    font-weight: 800;
+    line-height:85%;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    text-align: center;
+    padding:20px 0px;
+}
+.sub-head-bx img{
+    vertical-align: bottom;
+}
+/*Score Heading*/
+.score-heading p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height:112%;
+    letter-spacing: -0.4px;
+    color: #FFF4E8;
+    text-transform: uppercase;
+    margin-bottom:20px;
+}
+/*Sub score*/
+.sub-score{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:50px;
+}
+.score{
+    display:flex;
+    justify-content: space-between;
+    width:40%;
+    border-bottom: 1px solid #FFF4E8;
+    
+}
+.score-100{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    border-bottom: 1px solid #FFF4E8;
+    
+}
+.score-100 p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height:112%;
+    letter-spacing: -0.4px;
+    color: #FFF4E8;
+}
+.score-100 p span{
+    font-size: 12px;
+    font-weight: 400;
+    line-height:18px;
+    letter-spacing: -0.4px;
+    color: #8F8FA6;
+}
+.score-100 h3{
+    font-size: 30px;
+    font-weight: 700;
+    line-height:130%;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.score p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height:112%;
+    letter-spacing: -0.4px;
+    color: #FFF4E8;
+}
+.score p span{
+    font-size: 12px;
+    font-weight: 400;
+    line-height:18px;
+    letter-spacing: -0.4px;
+    color: #8F8FA6;
+}
+.score h3{
+    font-size: 30px;
+    font-weight: 700;
+    line-height:130%;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.l-sub-score{
+    margin-bottom:10px;
+}
+.sub-head-txt .score-mph{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 18px;
+}
+/*footer*/
+.social{
+    display:flex;
+    justify-content: space-around;
+    width:400px;
+    margin:100px auto 30px;
+}
+.address{
+    text-align: center;
+    margin-top:40px;
+}
+.address p{
+    font-size: 13px;
+    font-weight:400;
+    line-height:130%;
+}
+.ftr-logo{
+    text-align: center;
+    margin-top:40px;
+}
+footer{
+    padding-bottom:100px;
+}
+/*score-color*/
+.red{
+    color: #EF4444;
+}
+.red-bar{
+    background-image: url('../img/red_bar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:108px;
+    height: 12px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.orange{
+    color: #EF9644;
+}
+.orange-bar{
+    background-image: url('../img/orange_bar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:108px;
+    height: 12px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.green{
+    color: #7EF025;
+}
+.green-bar{
+    background-image: url('../img/green_bar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:108px;
+    height: 12px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.purple{
+    color: #A541FF;
+}
+.purple-bar{
+    background-image: url('../img/purple_bar.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:108px;
+    height: 12px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.gray{
+    color: #DDDDDD;
+}
+@media only screen and (max-width: 699px){
+    .wrapper{
+        width: 100%;
+    }
+    .prim-t h1{
+        font-size: 30px;
+        line-height:110%;
+    }
+    .prim-b img{
+        width: 300px;
+        height: auto;
+    }
+    .sub-score{
+        display:block;
+        margin-bottom:0px;
+    }
+    .sub-head{
+        margin:50px 0px 30px 0px;
+    }
+    .heading{
+        margin-top:50px;
+    }   
+    .score{
+        width:100%;
+       align-items: baseline;
+    }
+    
+    .score h3{
+        font-size: 28px;
+    }
+    .heading h2{
+        font-size:28px;
+    }
+    .sub-head-txt h4{
+        font-size: 16px;
+        line-height:130%;
+    } 
+    .sub-head-txt p{
+        font-size: 14px;
+        line-height:130%;
+    } 
+    .sub-head-txt .score-mph{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+    .r-sub-score{
+        margin-top:20px;
+        vertical-align: bottom;
+    }
+    
+}
+@media only screen and (max-width: 599px){
+    .wrapper{
+        width: 100%;
+    }
+    .prim-t h1{
+        font-size: 30px;
+        line-height:110%;
+    }
+    .prim-b img{
+        width: 300px;
+        height: auto;
+    }
+    .sub-score{
+        display:block;
+        margin-bottom:0px;
+    }
+    .sub-head{
+        margin:50px 0px 30px 0px;
+    }
+    .heading{
+        margin-top:50px;
+    }
+    .score{
+        width:100%;
+    }
+    .score h3{
+        font-size: 28px;
+    }
+    .heading h2{
+        font-size:28px;
+    }
+    .sub-head-txt h4{
+        font-size: 16px;
+        line-height:130%;
+    } 
+    .sub-head-txt p{
+        font-size: 14px;
+        line-height:130%;
+    } 
+    .sub-head-txt .score-mph{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+    .r-sub-score{
+        margin-top:20px;
+        vertical-align: bottom;
+    }
+    .social{
+        display:flex;
+        justify-content: space-around;
+        width:340px;
+        margin:100px auto 30px;
+    }
+}
